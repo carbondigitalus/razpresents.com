@@ -1,0 +1,107 @@
+/*----------
+Change Log
+20221017 @ 2330: Jared Ledbetter
+    Add:
+        -Initial file setup
+        -Hide header nav
+        -Setup fixed images
+----------*/
+
+/*----------
+[Table of Contents]
+
+0. Global & Extends
+1. Header
+2. Fixed Images
+
+----------*/
+
+/*----------
+[ 0. Global & Extends ]
+----------*/
+
+/*--- Media Query Variables ---*/
+@desktop-large: ~"screen and (min-width: 1201px)";
+@desktop-small: ~"screen and (max-width: 1200px)";
+@tablet-large: ~"screen and (max-width: 992px)";
+@tablet: ~"screen and (max-width: 768px)";
+@mobile: ~"screen and (max-width: 640px)";
+@mobile-small: ~"screen and (max-width: 400px)";
+
+/*--- Media Query Usage ---*/
+@media @desktop-large {
+}
+@media @desktop-small {
+}
+@media @tablet-large {
+}
+@media @tablet {
+}
+@media @mobile {
+}
+@media @mobile-small {
+}
+
+/*--- Colors ---*/
+@darkGray: #333;
+@darkRed: #7a2b62;
+@gray: #4a4a4a;
+@tan: #fbf5e1;
+
+/*--- H2 Fonts ---*/
+
+/*----------
+[ 1. Header ]
+----------*/
+
+/*--- nav not used - hide ---*/
+header.Header {
+  display: none !important;
+}
+
+/*----------
+[ 2. Fixed Images ]
+----------*/
+
+/*--- artist image sections ---*/
+#home-alex-runo-image,
+#home-asynjur-image,
+#home-reza-azul-image {
+  .sqs-block-spacer {
+    min-height: 500px;
+  }
+}
+
+/*--- flower images, both sides ---*/
+#home-nordic-soul,
+#home-reza-azul,
+#home-alex-runo {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  figure.sqs-block-image-figure {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    bottom: 0;
+    transform: translateY(60%);
+    z-index: 2;
+  }
+  .sqs-block-html {
+    z-index: 3;
+  }
+}
+/*--- left flower ---*/
+#home-nordic-soul,
+#home-reza-azul {
+  position: relative;
+  figure.sqs-block-image-figure {
+    left: 0;
+  }
+}
+/*--- right flower ---*/
+#home-alex-runo {
+  figure.sqs-block-image-figure {
+    right: 0;
+  }
+}
